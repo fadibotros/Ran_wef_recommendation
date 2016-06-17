@@ -46,8 +46,6 @@ import org.json.JSONException;
 public class Handle implements MessageListener
 {
     public static VHMsg vhmsg;
-    HTTP_manager http_man;
-//    FinalResult f;
     Pattern p;
     Matcher m;
     WebJsonGetter wj = new WebJsonGetter();
@@ -99,15 +97,8 @@ public class Handle implements MessageListener
         vhmsg.subscribeMessage("vrBadge");
         vhmsg.subscribeMessage("vrSendMessage");
         vhmsg.subscribeMessage("vrRecommendationSearchModuleResult");
-        //
-
-
-        // single time steps to set up teh HTTP adapter module ...
-
-        http_man = new HTTP_manager();
 
         // indicate ready status.
-
         vhmsg.sendMessage("vrWEFAdapter WEF adapter is ready !!!!");
 
         // Run your app, messages are received via a different thread
@@ -577,7 +568,6 @@ public class Handle implements MessageListener
     
 	public static void main(String[] args) throws ClassNotFoundException, IOException
     {
-		
         Handle han = new Handle();
         han.initializeDatabase();
     }
