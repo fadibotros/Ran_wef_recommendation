@@ -164,12 +164,17 @@ public class Handle implements MessageListener
                     if(m.find())// if we have a topic specified
                     {
                         String topic_string = m.group(1).trim();
+                        System.out.println("1. Sending to Oscar's module: " + topic_string);
+                        if( topic_string == null || topic_string.isEmpty() ){
+                            topic_string = str;
+                        }
                         vhmsg.sendMessage("vrRecommendationSearchModule people "+topic_string);
                         return;
                     }
                     else
                     {
-                        vhmsg.sendMessage("vrRecommendationSearchModule people business");
+                        System.out.println("2. Sending to Oscar's module: people Justine");
+                        vhmsg.sendMessage("vrRecommendationSearchModule people Justine");
                         return;
                     }
                 }
@@ -238,10 +243,15 @@ public class Handle implements MessageListener
                     {
                         String topic_string = m.group(1).trim();
                         vhmsg.sendMessage("vrRecommendationSearchModule sessions "+topic_string);
+                        if( topic_string == null || topic_string.isEmpty() ){
+                            topic_string = str;
+                        }
+                        System.out.println("3. Sending to Oscar's module: " + topic_string);
                         return;
                     }
                     else
                     {
+                        System.out.println("4. Sending to Oscar's module: sessions business");
                         vhmsg.sendMessage("vrRecommendationSearchModule sessions business");
                         return;
                     }
@@ -296,6 +306,7 @@ public class Handle implements MessageListener
             m = p.matcher(raw_msg);
             if( m.find() )
             {
+                System.out.println("5. Sending results for food: ");
                 vhmsg.sendMessage("vrRecommendationResults food [{  \"@@Location-two\": \"The espresso cafeteria\",  \"@@Location-one\": \"The isle\"  }]");
                 return;
             }
@@ -321,8 +332,8 @@ public class Handle implements MessageListener
             if(je!=null)
             {
                 String message = je.toString();
-
-                vhmsg.sendMessage("vrRecommendationResults "+saved_type+" "+message);
+                System.out.println("6. Sending results: " + saved_type+" "+message);
+                vhmsg.sendMessage("vrRecommendationResults " + saved_type + " " + message);
                 System.out.println(message);
 
             }
@@ -476,20 +487,21 @@ public class Handle implements MessageListener
                     }
                     else
                     {
-                        vhmsg.sendMessage("vrRecommendationSearchModule people business");
+                        System.out.println("7. Sending to Oscar's module: people Justine ");
+                        vhmsg.sendMessage("vrRecommendationSearchModule people Justine");
                     }
                 }
                 else
                 {
                 	String ordered_recommendation="";
                 	try {
-                		
 						 ordered_recommendation = order_search(m.group(2));
 					} catch (JSONException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-                    vhmsg.sendMessage("vrRecommendationResults recommend_people "+ordered_recommendation);
+                    System.out.println("8. Sending results: " +ordered_recommendation);
+                    vhmsg.sendMessage("vrRecommendationResults recommend_people " + ordered_recommendation);
                 }
             }
 
@@ -498,10 +510,12 @@ public class Handle implements MessageListener
                 String s = m.group(2).trim();
                 if(s.contentEquals("[]"))
                 {
+                    System.out.println("9. Sending to Oscar's module: sessions business ");
                     vhmsg.sendMessage("vrRecommendationSearchModule sessions business");
                 }
                 else
                 {
+                    System.out.println("10. Sending results recommend_sessions "+m.group(2));
                     vhmsg.sendMessage("vrRecommendationResults recommend_sessions "+m.group(2));
                 }
             }
@@ -542,6 +556,9 @@ public class Handle implements MessageListener
     		}
     	}
     	System.out.println(rec_result_list);
+        if( rec_result_list == null || rec_result_list.isEmpty() ){
+            rec_result_list = group;
+        }
 		return rec_result_list;
 		
 	}
