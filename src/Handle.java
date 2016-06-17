@@ -156,7 +156,7 @@ public class Handle implements MessageListener
                 str = str.trim();
 
                 // if its a participant
-                if(person_broad_type=="participant")
+                if(person_broad_type.equals("participant"))
                 {
                     Pattern p_topic = Pattern.compile("topic=([\\;\\w\\ ]+)");
                     m = p_topic.matcher(str);
@@ -229,7 +229,7 @@ public class Handle implements MessageListener
                 str = str.trim();
 
                 // if its a participant
-                if(person_broad_type=="participant")
+                if(person_broad_type.equals("participant"))
                 {
                     Pattern p_topic = Pattern.compile("topic=([\\;\\w\\ ]+)");
                     m = p_topic.matcher(str);
@@ -470,7 +470,7 @@ public class Handle implements MessageListener
                 String s = m.group(2).trim();
                 if(s.contentEquals("[]"))
                 {
-                    if(person_broad_type=="participant")
+                    if(person_broad_type.equals("participant"))
                     {
                         vhmsg.sendMessage("vrRecommendationPB "+current_userId);
                     }
