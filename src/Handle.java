@@ -41,6 +41,7 @@ import java.util.regex.Pattern;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import wef.articulab.test.WEFConnectorTest;
 
 
 public class Handle implements MessageListener
@@ -84,6 +85,7 @@ public class Handle implements MessageListener
         badge_file_loc = configs.get("badge_file_loc").getAsString();
         wefUrl = configs.get("wef_url").getAsString();
         vht = configs.get("vht").getAsString();
+        WEFConnectorTest.main(new String[]{vht});
 
         boolean ret = vhmsg.openConnection(vht);
         if (!ret)
