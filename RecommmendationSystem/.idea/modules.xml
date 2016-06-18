@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/http_adapter_china_davos.iml" filepath="$PROJECT_DIR$/http_adapter_china_davos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecommmendationSystem.iml" filepath="$PROJECT_DIR$/RecommmendationSystem.iml" />
     </modules>
   </component>
 </project>
