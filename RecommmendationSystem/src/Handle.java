@@ -69,6 +69,7 @@ public class Handle implements MessageListener
 
         //vhmsg = new VHMsg("ENTERPRISE.wv.cc.cmu.edu","DEFAULT_SCOPE");
         vhmsg = new VHMsg();// local host
+
         //// read config file
 
         // read the config
@@ -85,7 +86,11 @@ public class Handle implements MessageListener
         badge_file_loc = configs.get("badge_file_loc").getAsString();
         wefUrl = configs.get("wef_url").getAsString();
         vht = configs.get("vht").getAsString();
-        WEFConnectorTest.main(new String[]{vht});
+        new Thread(){
+            public void run(){
+                new WEFConnectorTest( new String[]{vht}) ;
+            }
+        }.start();
 
         boolean ret = vhmsg.openConnection(vht);
         if (!ret)
@@ -104,6 +109,10 @@ public class Handle implements MessageListener
         vhmsg.sendMessage("vrWEFAdapter WEF adapter is ready !!!!");
 
         // Run your app, messages are received via a different thread
+
+
+        // Arjun, replace this with real code:
+        vhmsg.sendMessage( getDummyAuthString() );
     }
 
     public void messageAction(MessageEvent e)
@@ -137,7 +146,6 @@ public class Handle implements MessageListener
             }
 
             // test case
-
             /*p = Pattern.compile("test(.*)$");
             m = p.matcher(raw_msg);
             if( m.find() )
@@ -149,7 +157,6 @@ public class Handle implements MessageListener
             }*/
 
             //// recommend people
-
             p = Pattern.compile("recommend_people(.*)$");
             m = p.matcher(raw_msg);
             if( m.find() )
@@ -330,7 +337,6 @@ public class Handle implements MessageListener
 
 
             // send the messages ...
-
             if(je!=null)
             {
                 String message = je.toString();
@@ -589,6 +595,58 @@ public class Handle implements MessageListener
     {
         Handle han = new Handle();
         han.initializeDatabase();
+    }
+
+
+    private String getDummyAuthString(){
+        return "vrAuthentication 11c637d235de9c7008c3e45f432b45357e6bc9aa 001b0000002mBt2AAE " +
+                "\n" +
+                "{\n" +
+                " \"id\": \"001b0000002mBt2AAE\",\n" +
+                " \"firstName\": \"Justine\",\n" +
+                " \"lastName\": \"Cassell\",\n" +
+                " \"fullName\": \"Justine Cassell\",\n" +
+                " \"email\": null,\n" +
+                " \"mobilePhone\": null,\n" +
+                " \"phone\": null,\n" +
+                " \"profile\": \"Degrees, DEUG,cUniversité de Besançon; BA, Dartmouth; MPhil, University of Edinburgh; PhD in Linguistics and Psychology, University of Chicago. Twenty years' experience in developing technologies that preserve and showcase the most human and humane of humanity’s capabilities, and in communicating the risks and opportunities technologies that ignore these guidelines pose to society. 1995-2003, Professor, MIT Media Lab. 2003-10, Founding Director, Center for Technology and Social Behavior, Northwestern University. Currently Professor, Director Emerita, Human-Computer Interaction Institute and Associate Dean, Technology Strategy and Impact, Carnegie Mellon. Fellow, AAAS. Author. Recipient, Anita Borg Women of Vision Award.\",\n" +
+                " \"countryOfNationality\": \"USA\",\n" +
+                " \"socialAccounts\": {},\n" +
+                " \"publicFigure\": false,\n" +
+                " \"organizationId\": \"001b0000005gugjAAA\",\n" +
+                " \"organizationName\": \"Carnegie Mellon University\",\n" +
+                " \"organizationType\": \"Business\",\n" +
+                " \"topLevelOrganizationId\": \"001b0000005gugjAAA\",\n" +
+                " \"positionTitle\": \"Associate Dean, Technology, Strategy and Impact, School of Computer Science\",\n" +
+                " \"forumNetworks\": [\n" +
+                "   {\n" +
+                "     \"forumCommunity\": \"Global Agenda Council on Artificial Intelligence & Robotics\",\n" +
+                "     \"network\": \"Global Agenda Councils\"\n" +
+                "   },\n" +
+                "   {\n" +
+                "     \"forumCommunity\": \"Meta-Council on the Future of Health\",\n" +
+                "     \"network\": \"Global Agenda Councils\"\n" +
+                "   }\n" +
+                " ],\n" +
+                " \"thumbnailUrl\": \"https://ewsqa-images.weforum.org/profiles/001b0000002mBt2AAE/thumbnail (4KB)\n" +
+                "\n" +
+                "\",\n" +
+                " \"photoUrl\": \"https://ewsqa-images.weforum.org/profiles/001b0000002mBt2AAE/standard (33KB)\n" +
+                "\n" +
+                "\",\n" +
+                " \"inBooklet\": true,\n" +
+                " \"contributions\": [\n" +
+                "   {\n" +
+                "     \"sessionId\": \"a0Wb0000005FFtoEAG\",\n" +
+                "     \"type\": \"Panellist\"\n" +
+                "   },\n" +
+                "   {\n" +
+                "     \"sessionId\": \"a0Wb0000005FLstEAG\",\n" +
+                "     \"type\": \"Panellist\"\n" +
+                "   }\n" +
+                " ],\n" +
+                " \"revision\": 11366662256141666000\n" +
+                "}";
     }
 
 }

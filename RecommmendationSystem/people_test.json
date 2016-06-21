@@ -1,0 +1,77 @@
+[
+ {
+    "id": "001b0000002mBt2AAE",
+    "firstName": "Justine",
+    "lastName": "Cassell",
+    "fullName": "Justine Cassell",
+    "email": null,
+    "mobilePhone": null,
+    "phone": null,
+    "profile": "Degrees, DEUG, Université de Besançon; BA, Dartmouth; MPhil, University of Edinburgh; PhD in Linguistics and Psychology, University of Chicago. Twenty years' experience in developing technologies that preserve and showcase the most human and humane of humanity’s capabilities, and in communicating the risks and opportunities technologies that ignore these guidelines pose to society. 1995-2003, Professor, MIT Media Lab. 2003-10, Founding Director, Center for Technology and Social Behavior, Northwestern University. Currently Professor, Director Emerita, Human-Computer Interaction Institute and Associate Dean, Technology Strategy and Impact, Carnegie Mellon. Fellow, AAAS. Author. Recipient, Anita Borg Women of Vision Award.",
+    "countryOfNationality": "USA",
+    "socialAccounts": {},
+    "publicFigure": false,
+    "organizationId": "001b0000005gugjAAA",
+    "organizationName": "Carnegie Mellon University",
+    "organizationType": "Business",
+    "topLevelOrganizationId": "001b0000005gugjAAA",
+    "positionTitle": "Associate Dean, Technology, Strategy and Impact, School of Computer Science",
+    "forumNetworks": [
+      {
+        "forumCommunity": "Global Agenda Council on Artificial Intelligence & Robotics",
+        "network": "Global Agenda Councils"
+      },
+      {
+        "forumCommunity": "Meta-Council on the Future of Health",
+        "network": "Global Agenda Councils"
+      }
+    ],
+    "thumbnailUrl": "https://ewsqa-images.weforum.org/profiles/001b0000002mBt2AAE/thumbnail",
+    "photoUrl": "https://ewsqa-images.weforum.org/profiles/001b0000002mBt2AAE/standard",
+    "inBooklet": true,
+    "contributions": [
+      {
+        "sessionId": "a0Wb0000005FFtoEAG",
+        "type": "Panellist"
+      },
+      {
+        "sessionId": "a0Wb0000005FLstEAG",
+        "type": "Panellist"
+      }
+    ],
+    "revision": 11366662256141666910
+  },
+    {
+    "id": "001b0000002mC6rAAE",
+    "firstName": "Shirley Ann",
+    "lastName": "Jackson",
+    "fullName": "Shirley Ann Jackson",
+    "email": "something@something.com",
+    "mobilePhone": "9842383748",
+    "phone": "43893200938",
+    "profile": "BSc in Physics, PhD in Theoretical Elementary Particle Physics, MIT. Senior leadership positions in academia, government, industry, and research. 1995-99, Chairman, US Nuclear Regulatory Commission. Since 1999, President, Rensselaer Polytechnic Institute. Former Member, President's Council of Advisors on Science & Technology. Co-Chair, US President's Intelligence Advisory Board. Member: US Department of State International Security Advisory Board; US Secretary of Energy Advisory Board. Vice-Chair, Board of Regents, Smithsonian Institution; Trustee, Brookings Institution; Director, Council on Foreign Relations; Life Member, MIT Corporation. Director: IBM, FedEx, Medtronic. International Fellow, British Royal Academy of Engineering. Member; US National Academy of Engineering; American Philosophical Society. Recipient, Vannevar Bush Award, US National Science Board (2007).",
+    "countryOfNationality": "USA",
+    "socialAccounts": {},
+    "publicFigure": false,
+    "organizationId": "001b0000005guGeAAI",
+    "organizationName": "Rensselaer Polytechnic Institute (RPI)",
+    "organizationType": "Business",
+    "topLevelOrganizationId": "001b0000005guGeAAI",
+    "positionTitle": "President",
+    "forumNetworks": [],
+    "thumbnailUrl": "https://ewsqa-images.weforum.org/profiles/001b0000002mC6rAAE/thumbnail",
+    "photoUrl": "https://ewsqa-images.weforum.org/profiles/001b0000002mC6rAAE/standard",
+    "inBooklet": true,
+    "contributions": [
+      {
+        "sessionId": "a0Wb0000005DlwjEAC",
+        "type": "Panellist"
+      },
+      {
+        "sessionId": "a0Wb0000005UxNlEAK",
+        "type": "Moderated by"
+      }
+    ],
+    "revision": 16757798125360307266
+  }
+]

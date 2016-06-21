@@ -1,0 +1,122 @@
+[
+  {
+    "id": "a0Wb0000005DQgLEAW",
+    "type": "BetaZone",
+    "keyword": "betazone/pricing nature",
+    "description": "Learn how nature fuels productivity and where the costs of environmental degradation are most dramatic.\n\n<i>Simultaneous interpretation in English, Mandarin Chinese and Japanese<i>\n\n<i>This session is filmed and will be available online at a later date.<i>",
+    "fee": null,
+    "currencyIsoCode": "CHF",
+    "spouseAllowed": true,
+    "pressAllowed": false,
+    "withMeal": false,
+    "signupRequired": false,
+    "cancelled": false,
+    "capacity": 112,
+    "roomId": "a0ob0000000PScCAAW",
+    "votingUrl": null,
+    "feedbackUrl": null,
+    "programmeName": "Official - Annual Meeting of the New Champions",
+    "startDatetime": "2016-06-26T16:45:00+08:00",
+    "endDatetime": "2016-06-26T17:30:00+08:00",
+    "name": "Putting a Price on Nature",
+    "number": null,
+    "title": "Putting a Price on Nature",
+    "sessionStructure": null,
+    "preparatoryDiscussionDurationInMinutes": 0,
+    "webcastUrl": null,
+    "insights": [],
+    "topics": [
+      {
+        "id": "a1Gb0000001hXikEAE"
+      },
+      {
+        "id": "a1Gb0000000LHOUEA4"
+      },
+      {
+        "id": "a1Gb0000001hXcwEAE"
+      }
+    ],
+    "contributors": [
+      {
+        "participantId": "001b0000005gmPrAAI",
+        "type": "Panellist"
+      },
+      {
+        "participantId": "001b0000002m01iAAA",
+        "type": "Moderated by"
+      }
+    ],
+    "statusUrl": "https://eventservicesqa.weforum.org/api/v1/events/a0Pb000000CCmcoEAD/sessions/a0Wb0000005DQgLEAW/status",
+    "showAttendees": true,
+    "tracks": [
+      {
+        "id": "a1ab0000005EhDHAA0"
+      },
+      {
+        "id": "a1ab0000005EsgQAAS"
+      }
+    ],
+    "revision": 16308318227601647178,
+    "thumbnail": null,
+    "photo": null
+  },
+  {
+    "id": "a0Wb0000005DSFKEA4",
+    "type": "IdeasLab",
+    "keyword": "ideaslab/berkeley",
+    "description": "Is technology propelling humankind toward its next phase of evolution?\n\n<i>Simultaneous interpretation in English and Mandarin Chinese<i>\n\n<i>This session is filmed and will be available online at a later date.<i>",
+    "fee": null,
+    "currencyIsoCode": "CHF",
+    "spouseAllowed": true,
+    "pressAllowed": false,
+    "withMeal": false,
+    "signupRequired": false,
+    "cancelled": false,
+    "capacity": 60,
+    "roomId": "a0ob0000000PSc9AAG",
+    "votingUrl": null,
+    "feedbackUrl": null,
+    "programmeName": "Official - Annual Meeting of the New Champions",
+    "startDatetime": "2016-06-27T16:00:00+08:00",
+    "endDatetime": "2016-06-27T17:15:00+08:00",
+    "name": "The End of Homo Sapien: The UC Berkeley IdeasLab",
+    "number": null,
+    "title": "The End of Homo Sapien: The UC Berkeley IdeasLab",
+    "sessionStructure": null,
+    "preparatoryDiscussionDurationInMinutes": 0,
+    "webcastUrl": null,
+    "insights": [],
+    "topics": [],
+    "contributors": [
+      {
+        "participantId": "001b000003JXwAxAAL",
+        "type": "Discussion Leader"
+      },
+      {
+        "participantId": "001b000003KJ7llAAD",
+        "type": "Discussion Leader"
+      },
+      {
+        "participantId": "001b000003KLVtlAAH",
+        "type": "Discussion Leader"
+      },
+      {
+        "participantId": "001b000000T7CWsAAN",
+        "type": "Facilitated by"
+      }
+    ],
+    "statusUrl": "https://eventservicesqa.weforum.org/api/v1/events/a0Pb000000CCmcoEAD/sessions/a0Wb0000005DSFKEA4/status",
+    "showAttendees": true,
+    "tracks": [
+      {
+        "id": "a1ab0000005EhCzAAK"
+      },
+      {
+        "id": "a1ab0000005EsgVAAS"
+      }
+    ],
+    "revision": 13468520796331787042,
+    "thumbnail": null,
+    "photo": null
+  }
+]
