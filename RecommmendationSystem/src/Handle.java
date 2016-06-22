@@ -145,16 +145,6 @@ public class Handle implements MessageListener
                 saved_type = m.group(1);
             }
 
-            // test case
-            /*p = Pattern.compile("test(.*)$");
-            m = p.matcher(raw_msg);
-            if( m.find() )
-            {
-                String url = m.group(1);
-                input_string = input_string.trim();
-
-                je = wj.get_json( "http://lookup.dbpedia.org/api/search.asmx/KeywordSearch?MaxHits=5&QueryString="+input_string.replace(" ","%20") );
-            }*/
 
             //// recommend people
             p = Pattern.compile("recommend_people(.*)$");
@@ -187,39 +177,6 @@ public class Handle implements MessageListener
                         return;
                     }
                 }
-
-                /*if(str.contains("topic"))
-                {
-                    // yahoo's module
-
-                    String s = wefUrl+"wef/v1/people/recommend?" + str.replace(" ", "%20");
-                    System.out.println("Sent out to yahoo's rec sys\t:::\t"+s);
-                    je = wj.get_json(s);
-                }
-                else*/
-                {
-                    // ran's module
-
-                    /*Pattern pat=Pattern.compile("userId=(\\w+)");
-                    Matcher ma = pat.matcher(raw_msg);
-                    if(ma.find())
-                    {
-                        String s = "vrRecommendationPB "+ma.group(1);
-                        System.out.println("Sent out to ran's rec sys\t:::\t"+s);
-                        vhmsg.sendMessage(s);
-                    }
-                    else
-                    {
-                        vhmsg.sendMessage("vrWEFAdapter no topic no userid");
-                    }
-                    return;*/
-
-                    /*
-                    String s = wefUrl+"wef/v1/people/recommend?topic=business&userId=0";
-                    System.out.println("Sent out to yahoo's rec sys\t:::\t"+s);
-                    je = wj.get_json(s);*/
-
-                }
             }
 
             //// recommend sessions
@@ -227,18 +184,7 @@ public class Handle implements MessageListener
             p = Pattern.compile("recommend_sessions(.*)$");
             m = p.matcher(raw_msg);
             if( m.find() )
-            {/*
-                String str = m.group(1);
-                str = str.trim();
-
-                je = wj.get_json(wefUrl+"wef/v1/session/recommend?" + str.replace(" ", "%20"));
-
-                String str = m.group(1);
-                str = str.trim();*/
-
-                //je = wj.get_json(wefUrl+"wef/v1/session/popular?");
-
-
+            {
                 String str = m.group(1);
                 str = str.trim();
 
@@ -285,29 +231,11 @@ public class Handle implements MessageListener
             m = p.matcher(raw_msg);
             if( m.find() )
             {
-                /*String str = m.group(1);
-                str = str.trim();
-
-                je = wj.get_json(wefUrl+"wef/v1/people/search?" + str.replace(" ", "%20"));*/
-
-
                 String s = wefUrl+"wef/v1/people/recommend?topic=business&userId=0";
                 System.out.println("Sent out to yahoo's rec sys\t:::\t"+s);
                 je = wj.get_json(s);
 
             }
-
-            //// search sessions
-
-//            p = Pattern.compile("search_sessions (.*)$");
-//            m = p.matcher(raw_msg);
-//            if( m.find() )
-//            {
-//                String str = m.group(1);
-//                str = str.trim();
-//
-//                je = wj.get_json("http://at02.broadway.gq1.yahoo.com/wef/v1/session/recommend?" + str.replace(" ", "%20"));
-//            }
 
             //// recommend food
 
@@ -316,7 +244,12 @@ public class Handle implements MessageListener
             if( m.find() )
             {
                 System.out.println("5. Sending results for food: ");
-                vhmsg.sendMessage("vrRecommendationResults food [{  \"@@Location-two\": \"The espresso cafeteria\",  \"@@Location-one\": \"The isle\"  }]");
+                vhmsg.sendMessage("vrRecommendationResults food " +
+                        " [{\"type\":\"food\",\"id\":\"Swan Oyster Depot\",\"startDateTime\":\"2016/11/24 11:30\"," +
+                        "\"endDateTime\":\"2016/11/24 13:30\",\"address\":\"1517 Polk St, Tianjing\",\"description\":" +
+                        "\"We serve thai cuisine.\",\"keywords\":\"Oyster,thai\"},{\"type\":\"food\",\"id\":\"Anchor Oyster Bar\"," +
+                        "\"startDateTime\":\"2016/11/24 7:30\",\"endDateTime\":\"2016/11/24 10:30\",\"address\":\"579 Castro St, Tianjing\"," +
+                        "\"description\":\"We serve thai cuisine.\",\"keywords\":\"Oyster,thai,Bar\"}]");
                 return;
             }
 
@@ -333,7 +266,6 @@ public class Handle implements MessageListener
             }
 
             // end of all the options !! thank god !
-
 
 
             // send the messages ...
